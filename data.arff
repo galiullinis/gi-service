@@ -1,3 +1,12 @@
+@RELATION verse
+
+@ATTRIBUTE text_volume NUMERIC
+@ATTRIBUTE line_length NUMERIC
+@ATTRIBUTE punct_to_words NUMERIC
+@ATTRIBUTE rhyme NUMERIC
+@ATTRIBUTE class {verse,not_verse}
+
+@DATA
 590.0 30.0 163.0 0.5 verse
 19.0 26.0 3.0 0.25 verse
 16.0 24.0 3.0 0.5 verse
