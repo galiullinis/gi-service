@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import ru.mai.gi.service.Content;
+import ru.mai.gi.service.domain.Content;
 import ru.mai.gi.service.services.ContentService;
 import ru.mai.gi.service.tools.classifier.Verse;
 import ru.mai.gi.service.tools.vectorizer.Action;

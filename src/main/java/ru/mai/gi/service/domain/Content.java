@@ -1,4 +1,4 @@
-package ru.mai.gi.service;
+package ru.mai.gi.service.domain;
 
 import java.io.*;
 import java.util.Arrays;
@@ -9,9 +9,5 @@ public class Content {
 
     public String getContent() throws IOException {
         return content;
-    }
-
-    public void setContent(String content){
-        this.content = content;
     }
 }
