@@ -1,4 +1,4 @@
-package ru.mai.gi.service.vectorizer;
+package ru.mai.gi.service.tools.vectorizer;
 
 public enum VectorAttributes {
     LINE_LENGTH("line_length"), // средняя длина одной строки

@@ -1,4 +1,4 @@
-package ru.mai.gi.service.vectorizer;
+package ru.mai.gi.service.tools.vectorizer;
 
 import java.io.BufferedReader;
 import java.io.File;

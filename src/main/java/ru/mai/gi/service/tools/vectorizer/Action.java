@@ -1,8 +1,6 @@
-package ru.mai.gi.service.vectorizer;
+package ru.mai.gi.service.tools.vectorizer;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 

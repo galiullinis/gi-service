@@ -1,4 +1,4 @@
-package ru.mai.gi.service.classifier;
+package ru.mai.gi.service.tools.classifier;
 
 import weka.classifiers.Classifier;
 import weka.core.Attribute;
