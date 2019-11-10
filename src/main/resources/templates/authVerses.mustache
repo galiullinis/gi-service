@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<style>
+    h1 {
+        color: #008000;
+    }
+    ul {
+        color: #008000;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 24px;
+        font-family: Montserrat;
+    }
+</style>
+<head>
+    <title>GI-SERVICE: Classify your text!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Читать стихи</h1>
+<h2><a href="/greeting">Перейти к классификатору</a></h2>
+<h2><a href="/verses">Назад к категориям</a></h2>
+<ul>
+    {{#verses}}
+        <li><a href="{{category}}/{{.}}" name="{{.}}">{{.}}</a></li>
+    {{/verses}}
+</ul>
+</body>
+</html>

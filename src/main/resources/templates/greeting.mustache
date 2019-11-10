@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <style>
-    h1 {
+    h1, h2 {
         color: #008000;
     }
     #enterText {
@@ -14,6 +14,13 @@
         display: inline-block;
         font-size: 16px;
         font-family: Montserrat;
+        cursor: pointer;
+    }
+    #category {
+        color: #008000;
+        text-align: center;
+        font-size: 24px;
+        font-family: Montserrat;
     }
 </style>
 <head>
@@ -22,11 +29,13 @@
 </head>
 <body>
     <h1>Hello, {{ name }}!</h1>
-    <div>
-        <form name="content" action="classify" method="post">
-            <textarea name="content" style="resize: none;" cols="90" rows="20"></textarea><br/>
-            <input id="enterText" type="submit" value="Проверить" />
-        </form>
-    </div>
+    <h2><a href="/verses">Перейти к стихам</a></h2>
+    <h3>Введите ниже текст, который вы хотите проверить</h3>
+        <div>
+            <form name="content" action="classify" method="post">
+                <textarea name="content" style="resize: none;" cols="90" rows="20"></textarea><br/>
+                <input id="enterText" type="submit" value="Проверить" />
+            </form>
+        </div>
 </body>
 </html>

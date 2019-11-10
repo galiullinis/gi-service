@@ -14,12 +14,20 @@ import java.util.List;
 public class ContentServiceImpl implements ContentService {
     private String filename = "intermediate";
     final private String dirName = "src/main/resources/";
+    private String curFileName = null;
+
+    public String getCurFileName() {
+        return curFileName;
+    }
+
+    public void setCurFileName(String curFileName) {
+        this.curFileName = curFileName;
+    }
 
     public String getDirName() {
         return dirName;
     }
 
-    @Override
     public String getFilename() {
         return filename;
     }
@@ -42,7 +50,7 @@ public class ContentServiceImpl implements ContentService {
             }
         }
         File file = new File(dirName + fileName);
-        setFilename(dirName + fileName);
+        setCurFileName(dirName + fileName);
         BufferedWriter bufferedWriter = new BufferedWriter(
                 new FileWriter(file));
         bufferedWriter.write(content);
@@ -66,7 +74,7 @@ public class ContentServiceImpl implements ContentService {
 
     @Override
     public void deleteFile() {
-        String fileName = getFilename();
+        String fileName = getCurFileName();
         File file = new File(fileName);
         System.out.println("File '" + file.getName() + "' deleted status: " + file.delete());
         System.out.println("");

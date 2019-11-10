@@ -10,4 +10,8 @@ public class Content {
     public String getContent() throws IOException {
         return content;
     }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 }

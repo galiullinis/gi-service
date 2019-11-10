@@ -7,11 +7,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ru.mai.gi.service.domain.Content;
+import ru.mai.gi.service.services.Classification;
 import ru.mai.gi.service.services.ContentService;
+import ru.mai.gi.service.services.impl.ClassificationImpl;
 import ru.mai.gi.service.tools.classifier.Verse;
 import ru.mai.gi.service.tools.vectorizer.Action;
 
-import java.util.Map;
+import java.util.*;
 
 @Controller
 public class GreetingController {
@@ -29,15 +31,12 @@ public class GreetingController {
     @PostMapping("/classify")
     public String classify(@ModelAttribute Content content, Map<String, Object> model) throws Exception {
         contentService.saveFile(content.getContent());
-        String data = Action.createVectors(contentService.getFilename());
+        String data = Action.createVectors(contentService.getCurFileName());
         contentService.deleteFile();
         Verse verse = new Verse();
-        String textResult;
-        if (verse.classifyText(data).equals("verse")){
-            textResult = "Введенный вами текст является стихом!";
-        } else {
-            textResult = "Введенный вами текст не является стихом!";
-        }
+        String textResult = verse.classifyText(data);
+        Classification classification = new ClassificationImpl(textResult);
+        textResult = classification.getResult(textResult);
         model.put("textResult", textResult);
         return "result";
     }
