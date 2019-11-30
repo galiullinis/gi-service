@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <style>
-    h1 {
+    h1, p {
         color: #008000;
     }
     ul {
@@ -20,6 +20,7 @@
 <h1>Читать стихи</h1>
 <h2><a href="/greeting">Перейти к классификатору</a></h2>
 <h2><a href="/verses">Назад к категориям</a></h2>
+<p style="font-size: 18px;">Количество стихов на странице: {{count}}</p>
 <ul>
     {{#verses}}
         <li><a href="{{category}}/{{.}}" name="{{.}}">{{.}}</a></li>

@@ -35,6 +35,9 @@ public class VersesController {
     public String categoryVerses(@PathVariable("author") String author, Map<String, Object> model) {
         CategoryVerses categoryVerses = new CategoryVersesImpl(author);
         List<String> templateVersesNames = categoryVerses.showVerses();
+        int count;
+        count = templateVersesNames.size();
+        model.put("count", count);
         model.put("category", author);
         model.put("verses", templateVersesNames);
         return "authVerses";
