@@ -7,7 +7,7 @@ import java.util.List;
 public class Content {
     private String content;
 
-    public String getContent() throws IOException {
+    public String getContent() {
         return content;
     }
 
