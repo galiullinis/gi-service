@@ -7,3 +7,4 @@ gen
 **/txt_files
 gi-service-1.0-SNAPSHOT.jar
 /src/main/resources/verses/
+intermediate*.txt

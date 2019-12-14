@@ -51,7 +51,7 @@ public class VersesController {
         BufferedReader bf = new BufferedReader(new FileReader(file));
         StringBuilder stringBuilder = new StringBuilder();
         String s = null;
-        while ((s = bf.readLine()) != null){
+        while ((s = bf.readLine()) != null) {
             stringBuilder.append(s);
             stringBuilder.append("\n");
         }

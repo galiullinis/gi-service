@@ -10,4 +10,7 @@ public class MainController {
     public String main(){
         return "gi-service";
     }
+
+    @GetMapping("/hello")
+    public String error(){ return "Hello world"; }
 }
